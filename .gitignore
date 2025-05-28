@@ -1,0 +1,15 @@
+# LaTeX 產生檔案
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.vrb
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+
+# 系統檔案
+.DS_Store
+Thumbs.db 
