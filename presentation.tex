@@ -1,76 +1,56 @@
 \documentclass{beamer}
-% 使用 XeLaTeX 編譯
-\usepackage{fontspec}
+\usepackage[utf8]{inputenc}
 \usepackage{xeCJK}
-% Mac 系統預設繁體中文常用字體
+\usepackage{graphicx}
+\usepackage{amsmath}
+
 \setCJKmainfont{PingFang TC}
 
-\usetheme{Madrid}
-
-\title{TWSIAM 2025 演講}
-\author{}
-\date{}
+\title{哥布林介紹}
+\author{作者名稱}
+\date{\today}
 
 \begin{document}
 
-\frame{\titlepage}
-
-% 定義章節順序，以便目錄顯示完整
-\section{神經網路認知模型導論}
-\section{哥布林是什麼？}
-\section{哥布林的特徵}
-\section{哥布林在文化中的形象}
-\section{哥布林的數學趣談}
+\begin{frame}
+    \titlepage
+\end{frame}
 
 \begin{frame}{目錄}
-  \tableofcontents
+    \tableofcontents
 \end{frame}
 
-\begin{frame}{神經網路認知模型導論}
-  \begin{itemize}
-    \item Connectionist 模型：把大腦想像成一群互連的節點，用演算法模擬它如何處理信息。
-    \item \textbf{McCulloch-Pitts}: 最原始的神經元模型，就像一個只能開／關的開關（0/1 輸入輸出）。
-    \item \textbf{Perceptron}: 把多個開關串在一起，能學習簡單的分類（像判斷郵件是否為垃圾郵件）。
-    \item \textbf{ADALINE}: 在 Perceptron 基礎上可微分，透過誤差最小化自動調整權重，更穩定的學習方式。
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{神經網路認知模型導論（續）}
-  \begin{itemize}
-    \item \textbf{Multilayer Perceptron}: 加入隱藏層和非線性函數，就能解決複雜問題，比如辨識手寫數字。
-    \item \textbf{Convolutional NN}: 專門處理圖像，透過「卷積」找特徵、「池化」壓縮資訊，就像圖像打馬賽克前先找重點。
-    \item \textbf{Recurrent NN}: 適合序列型資料（如語音、文字），能記憶前後文（Elman, LSTM）。
-  \end{itemize}
-\end{frame}
-
+\section{哥布林是什麼？}
 \begin{frame}{哥布林是什麼？}
-  \begin{itemize}
-    \item 哥布林是一種出現在歐洲民間傳說中的小型妖精或怪物。
-    \item 常見於奇幻文學、遊戲與電影中。
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{哥布林的特徵}
     \begin{itemize}
-        \item 身材矮小，皮膚多為綠色或灰色。
-        \item 通常有尖耳朵、大鼻子、銳利的牙齒，性格狡猾、貪婪，有時帶點幽默感。
+        \item 哥布林是一種出現在歐洲民間傳說中的小型妖精或怪物。
+        \item 常見於奇幻文學、遊戲與電影中。
     \end{itemize}
 \end{frame}
 
+\section{哥布林的特徵}
+\begin{frame}{哥布林的特徵}
+    \begin{itemize}
+        \item 身材矮小，皮膚多為綠色或灰色。
+        \item 通常有尖耳朵、大鼻子、銳利的牙齒。
+        \item 性格狡猾、貪婪，有時帶點幽默感。
+    \end{itemize}
+\end{frame}
+
+\section{哥布林在文化中的形象}
 \begin{frame}{哥布林在文化中的形象}
-  \begin{itemize}
-    \item 在《魔戒》、《哈利波特》等作品中都有出現。
-    \item 遊戲如《魔獸世界》、《龍與地下城》也有各種哥布林角色。
-  \end{itemize}
+    \begin{itemize}
+        \item 在《魔戒》、《哈利波特》等作品中都有出現。
+        \item 遊戲如《魔獸世界》、《龍與地下城》也有各種哥布林角色。
+    \end{itemize}
 \end{frame}
 
+\section{哥布林的數學趣談}
 \begin{frame}{哥布林的數學趣談}
-  \begin{itemize}
-    \item 假設有 5 個哥布林要分 20 枚金幣，每個至少分到 2 枚，問分法數量。
-  \end{itemize}
-  \[
-    \#\{(x_1,\dots,x_5)\in\mathbb{Z}^5\mid x_i\ge2,\sum_{i=1}^5 x_i=20\}
-  \]
+    假設有 5 個哥布林要分 20 枚金幣，每個哥布林至少要分到 2 枚，請問有多少種分法？
+    \[
+    \text{這是一個經典的整數分拆問題。}
+    \]
 \end{frame}
 
-\end{document}
+\end{document} 
