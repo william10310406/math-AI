@@ -20,12 +20,44 @@
     \tableofcontents
 \end{frame}
 
-\section{哥布林是什麼？}
-\begin{frame}{哥布林是什麼？}
-    \begin{itemize}
-        \item 哥布林是一種出現在歐洲民間傳說中的小型妖精或怪物。
-        \item 常見於奇幻文學、遊戲與電影中。
-    \end{itemize}
+\section{Perceptron}
+% 第一頁：Perceptron 介紹
+\begin{frame}{Perceptron 簡介}
+\begin{itemize}
+  \item 1958 年由 Frank Rosenblatt 提出，為早期生物啟發的神經網路模型  
+  \item 改進 McCulloch–Pitts 模型，加入\alert{可更新的權重}與\alert{錯誤修正學習}  
+  \item 可解決\textbf{線性可分}之二分類問題（例如：貓 vs 狗）  
+  \item 三層結構：輸入層（感官）→ 聯想層（隱藏）→ 輸出層（回饋學習）  
+  \item 核心機制：\textbf{誤差更正（error-correction learning）}:contentReference[oaicite:0]{index=0}
+\end{itemize}
+\end{frame}
+
+% 第二頁：Perceptron 的數學原理
+\begin{frame}{Perceptron 的數學原理}
+\begin{enumerate}
+  \item \textbf{線性加權總和}
+  \[
+    z = \sum_{i=1}^{n} w_i x_i + b
+  \]
+  \item \textbf{階梯啟動函數（Threshold）}
+  \[
+    \hat{y} =
+    \begin{cases}
+      +1, & z \ge 0,\\
+      -1, & z < 0.
+    \end{cases}
+  \]
+  \item \textbf{權重更新規則（Error-Correction）}
+  \[
+    w_i \leftarrow w_i + \eta\,\bigl(y - \hat{y}\bigr)\,x_i,
+    \quad
+    b \leftarrow b + \eta\,(y - \hat{y})
+  \]
+  \begin{itemize}
+    \item $\eta$：學習率，決定單次更新的步幅  
+    \item 保證\textbf{線性可分問題}下收斂至正確分類:contentReference[oaicite:1]{index=1}
+  \end{itemize}
+\end{enumerate}
 \end{frame}
 
 \section{哥布林的特徵}
