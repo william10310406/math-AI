@@ -60,6 +60,55 @@
 \end{enumerate}
 \end{frame}
 
+\begin{frame}{ADALINE 自適應線性神經元}
+    \begin{center}
+        \includegraphics[width=0.8\textwidth]{ADALINE_picture.png}
+    \end{center}
+\end{frame}
+
+% 概覽
+\begin{frame}{Overview}
+\begin{itemize}
+\item 發明者：Widrow \& Hoff (1959)
+\item 目標：最小化均方誤差 (MSE)
+\item 特點：線性輸出，連續可微
+\item 演算法：Gradient Descent
+\item 優勢：收斂穩定、更新平滑
+\end{itemize}
+\end{frame}
+
+% 數學形式
+\begin{frame}{ADALINE 數學形式}
+\[
+  \hat y = \mathbf{w}^\top \mathbf{x} + b
+\]
+\[
+  \mathrm{MSE} = \frac{1}{n}\sum_{i=1}^n(y_i - \hat y_i)^2
+\]
+\[
+  w \leftarrow w - \eta\,(y - \hat y)\,x
+\]
+\end{frame}
+
+% 訓練演算法
+\begin{frame}{訓練演算法}
+\begin{itemize}
+\item 計算 linear aggregation: $\hat y$
+\item 計算 error: $(y - \hat y)^2$
+\item 更新權重: $w \leftarrow w - \eta\,(y - \hat y)x$
+\end{itemize}
+\end{frame}
+
+% 應用場景
+\begin{frame}{應用場景}
+\begin{itemize}
+\item 自適應濾波 (Adaptive Filtering)
+\item 噪音消除 (Noise Cancellation)
+\item 時序預測 (Time Series Prediction)
+\item 自動控制系統 (Control Systems)
+\end{itemize}
+\end{frame}
+
 \section{哥布林的特徵}
 \begin{frame}{哥布林的特徵}
     \begin{itemize}
